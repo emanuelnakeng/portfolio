@@ -10,7 +10,7 @@ function Home() {
 				<h3 className='text-xl font-semibold text-dark-clr'>
 					Hello! I'm Emanuel.
 				</h3>
-				<h1 className='font-bold text-4xl sm:text-8xl text-dark-clr sm:w-11/12'>
+				<h1 className='font-bold text-6xl sm:text-8xl text-dark-clr sm:w-11/12'>
 					Building efficient solutions with quality code and{' '}
 					<span className='text-light-clr'>creative solutions</span>
 				</h1>
@@ -23,13 +23,13 @@ function Home() {
 				</div>
 			</section>
 			<section className='container mx-auto px-5 flex flex-col gap-5 pt-16 pb-10'>
-				<h2 className='font-bold text-3xl sm:text-6xl text-dark-clr'>
+				<h2 className='font-bold text-4xl sm:text-6xl text-dark-clr'>
 					Discover my popular work
 				</h2>
 				<p>Work goes here</p>
 			</section>
 			<section className='container mx-auto px-5 flex flex-col gap-8 py-16'>
-				<h2 className='font-bold text-3xl sm:text-6xl text-dark-clr sm:w-5/6'>
+				<h2 className='font-bold text-4xl sm:text-6xl text-dark-clr sm:w-5/6'>
 					Creating intuitive and engaging user experiences
 				</h2>
 				<h3 className='font-base text-base sm:text-lg text-dark-clr sm:w-5/6'>
@@ -76,7 +76,7 @@ function Home() {
 				<h3 className='text-xl font-semibold text-dark-clr'>
 					Have an idea?
 				</h3>
-				<h2 className='font-bold text-4xl sm:text-8xl text-dark-clr text-center'>
+				<h2 className='font-bold text-6xl sm:text-8xl text-dark-clr text-center'>
 					Talk to me about your{' '}
 					<span className='text-light-clr'>next project</span>
 				</h2>
