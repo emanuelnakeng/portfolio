@@ -7,7 +7,7 @@ function SocialLinks({ color }) {
 				return (
 					<li
 						key={index + '_'}
-						className={`inline-flex ${color} font-normal text-base text-dark-clr hover:text-dark-clr`}
+						className={`inline-flex ${color} font-normal text-sm sm:text-base text-dark-clr hover:text-dark-clr`}
 					>
 						<a
 							className='hover:underline hover:underline-offset-2 '

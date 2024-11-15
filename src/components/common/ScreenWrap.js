@@ -17,12 +17,10 @@ function ScreenWrap({ children }) {
 				</div>
 			</header>
 			<main>{children}</main>
-			<footer className='bg-white pb-10 flex justify-between items-center container mx-auto px-5 border-t-[0.1px] border-t-border-clr/40 pt-10'>
-				<div>
-					<h4 className='text-base font-normal text-light-clr'>
-						&copy; {currentYear} All rights reserved
-					</h4>
-				</div>
+			<footer className='bg-white pb-10 flex sm:flex-row flex-col gap-5 justify-between items-center container mx-auto px-5 border-t-[0.1px] border-t-border-clr/40 pt-10'>
+				<h4 className='font-normal text-light-clr text-sm sm:text-base'>
+					&copy; {currentYear} All rights reserved
+				</h4>
 				<SocialLinks color='text-light-clr' />
 			</footer>
 		</>
