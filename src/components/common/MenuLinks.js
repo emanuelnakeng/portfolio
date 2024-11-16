@@ -1,9 +1,9 @@
-import data from '../../utils/data';
+import { Link } from 'react-router-dom';
 
-function SocialLinks({ color }) {
+function MenuLinks({ color, links, newTab }) {
 	return (
 		<ul className='flex'>
-			{data.socials.map((social, index) => {
+			{links.map((linkItem, index) => {
 				return (
 					<li
 						key={index + '_'}
@@ -11,13 +11,13 @@ function SocialLinks({ color }) {
 					>
 						<a
 							className='hover:underline hover:underline-offset-2 '
-							href={social.link}
-							target='_blank'
+							target={newTab ? '_blank' : ''}
+							href={linkItem.link}
 							rel='noreferrer'
 						>
-							{social.name}{' '}
+							{linkItem.name}{' '}
 						</a>
-						{index !== data.socials.length - 1 && (
+						{index !== links.length - 1 && (
 							<p className='px-3'>/</p>
 						)}
 					</li>
@@ -26,4 +26,4 @@ function SocialLinks({ color }) {
 		</ul>
 	);
 }
-export default SocialLinks;
+export default MenuLinks;

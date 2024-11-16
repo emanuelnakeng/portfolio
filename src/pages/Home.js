@@ -17,8 +17,15 @@ function Home() {
 		});
 	};
 
+	const getRandomArrayItems = (arr, items) => {
+		const shuffled = arr.sort(() => 0.5 - Math.random());
+		return shuffled.slice(0, items);
+	};
+
+	const randomProjects = getRandomArrayItems(data.projects, 4);
+
 	return (
-		<ScreenWrap>
+		<ScreenWrap scrollTo={scrollTo}>
 			<section className='container mx-auto px-5 flex flex-col gap-8 py-16'>
 				<h3 className='text-xl font-semibold text-dark-clr'>
 					Hello! I'm Emanuel.
@@ -48,9 +55,9 @@ function Home() {
 				<h2 className='font-bold text-4xl sm:text-6xl text-dark-clr'>
 					Discover my popular work
 				</h2>
-				<div className='grid grid-cols-1 gap-10 md:grid-cols-2 pt-8'>
-					{data.projects.map((project, id) => (
-						<SingleProject props={project} key={id + '_'} />
+				<div className='grid grid-cols-1 sm:grid-cols-2 gap-16 pt-8'>
+					{randomProjects.map(project => (
+						<SingleProject props={project} key={project.id} />
 					))}
 				</div>
 			</section>
@@ -61,7 +68,7 @@ function Home() {
 				<h2 className='font-bold text-4xl sm:text-6xl text-dark-clr sm:w-5/6'>
 					Creating intuitive and engaging user experiences
 				</h2>
-				<h3 className='font-base text-base sm:text-lg text-light-clr sm:w-5/6'>
+				<h3 className='font-normal text-base sm:text-lg text-light-clr sm:w-5/6'>
 					I’m a software developer based in Gauteng, South Africa,
 					dedicated to creating digital solutions that inspire,
 					delight, and address real-world problems. My focus is on
@@ -100,7 +107,7 @@ function Home() {
 								<h4 className='font-semibold text-lg hover:cursor-pointer'>
 									{skill.name}
 								</h4>
-								<p className='text-base text-light-clr hover:cursor-pointer font-normal'>
+								<p className='text-base text-light-clr hover:cursor-pointer font-base'>
 									{skill.description}
 								</p>
 							</div>

@@ -1,14 +1,14 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
-import Portfolio from './pages/Portfolio';
+import ProjectDetails from './pages/ProjectDetails';
 
 function App() {
 	return (
 		<BrowserRouter>
 			<Routes>
 				<Route exact path='/' element={<Home />} />
-				<Route path='/portfolio/:id' element={<Portfolio />} />
+				<Route path='/project/:id' element={<ProjectDetails />} />
 				<Route path='*' element={<NotFound />} />
 			</Routes>
 		</BrowserRouter>

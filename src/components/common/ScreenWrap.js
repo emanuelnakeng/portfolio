@@ -1,5 +1,7 @@
 import Button from './Button';
-import SocialLinks from './SocialLinks';
+import MenuLinks from './MenuLinks';
+import data from '../../utils/data';
+
 function ScreenWrap({ children }) {
 	const currentYear = new Date().getFullYear();
 
@@ -7,7 +9,7 @@ function ScreenWrap({ children }) {
 		<>
 			<header className='bg-white'>
 				<div className='container mx-auto w-full py-16 flex justify-between items-center px-5'>
-					<SocialLinks color='text-dark-clr' />
+					<MenuLinks color='text-dark-clr' links={data.navigation} />
 					<div>
 						<Button
 							styles='bg-dark-clr text-white'
@@ -23,7 +25,7 @@ function ScreenWrap({ children }) {
 				<h4 className='font-normal text-dark-clr text-sm sm:text-base'>
 					&copy; {currentYear} All rights reserved
 				</h4>
-				<SocialLinks color='text-dark-clr' />
+				<MenuLinks color='text-dark-clr' links={data.socials} newTab />
 			</footer>
 		</>
 	);

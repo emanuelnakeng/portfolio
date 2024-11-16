@@ -12,7 +12,7 @@ function Button({ to, label, styles, newTab, onClick }) {
 			<p className='font-medium text-base hover:underline underline-offset-2 pr-1'>
 				{label}
 			</p>
-			<MdArrowOutward size={16} />
+			<MdArrowOutward size={18} />
 		</Link>
 	);
 }
