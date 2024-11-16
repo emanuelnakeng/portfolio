@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 function MenuLinks({ color, links, newTab }) {
 	return (
 		<ul className='flex'>
