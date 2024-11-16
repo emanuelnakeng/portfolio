@@ -12,16 +12,18 @@ function ScreenWrap({ children }) {
 						<Button
 							styles='bg-dark-clr text-white'
 							label='Talk to me'
+							to='https://wa.me/27680682916?text=Hi'
+							newTab
 						/>
 					</div>
 				</div>
 			</header>
 			<main>{children}</main>
 			<footer className='bg-white pb-10 flex sm:flex-row flex-col gap-5 justify-between items-center container mx-auto px-5 border-t-[0.1px] border-t-border-clr/40 pt-10'>
-				<h4 className='font-normal text-light-clr text-sm sm:text-base'>
+				<h4 className='font-normal text-dark-clr text-sm sm:text-base'>
 					&copy; {currentYear} All rights reserved
 				</h4>
-				<SocialLinks color='text-light-clr' />
+				<SocialLinks color='text-dark-clr' />
 			</footer>
 		</>
 	);

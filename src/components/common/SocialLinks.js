@@ -12,6 +12,8 @@ function SocialLinks({ color }) {
 						<a
 							className='hover:underline hover:underline-offset-2 '
 							href={social.link}
+							target='_blank'
+							rel='noreferrer'
 						>
 							{social.name}{' '}
 						</a>

@@ -9,5 +9,6 @@
 		font-family: 'Inter', system-ui;
 		font-optical-sizing: auto;
 		@apply box-border;
+		@apply scroll-smooth;
 	}
 }

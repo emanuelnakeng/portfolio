@@ -1,9 +1,22 @@
 import Button from '../components/common/Button';
 import ScreenWrap from '../components/common/ScreenWrap';
+import SingleProject from '../components/common/SingleProject';
 import data from '../utils/data';
-import { CiPalette, CiMobile1, CiDesktop, CiTrophy } from 'react-icons/ci';
+import {
+	CiPalette,
+	CiMobile1,
+	CiDeliveryTruck,
+	CiTrophy,
+} from 'react-icons/ci';
 
 function Home() {
+	const scrollTo = id => {
+		const element = document.getElementById(id);
+		element?.scrollIntoView({
+			behavior: 'smooth',
+		});
+	};
+
 	return (
 		<ScreenWrap>
 			<section className='container mx-auto px-5 flex flex-col gap-8 py-16'>
@@ -15,36 +28,54 @@ function Home() {
 					<span className='text-light-clr'>creative solutions</span>
 				</h1>
 				<div className='flex pt-10 gap-5'>
-					<Button label='WhatsApp' styles='bg-dark-clr text-white' />
 					<Button
-						label='Email me'
-						styles='border-2 border-border-clr '
+						label='WhatsApp'
+						styles='bg-dark-clr text-white'
+						to='https://wa.me/27680682916?text=Hi'
+						newTab
+					/>
+					<Button
+						label='About me'
+						styles='border-2 border-border-clr'
+						onClick={() => scrollTo('about')}
 					/>
 				</div>
 			</section>
-			<section className='container mx-auto px-5 flex flex-col gap-5 pt-16 pb-10'>
+			<section
+				className='container mx-auto px-5 flex flex-col gap-5 pt-16 pb-10'
+				id='projects'
+			>
 				<h2 className='font-bold text-4xl sm:text-6xl text-dark-clr'>
 					Discover my popular work
 				</h2>
-				<p>Work goes here</p>
+				<div className='grid grid-cols-1 gap-10 md:grid-cols-2 pt-8'>
+					{data.projects.map((project, id) => (
+						<SingleProject props={project} key={id + '_'} />
+					))}
+				</div>
 			</section>
-			<section className='container mx-auto px-5 flex flex-col gap-8 py-16'>
+			<section
+				className='container mx-auto px-5 flex flex-col gap-8 py-16'
+				id='about'
+			>
 				<h2 className='font-bold text-4xl sm:text-6xl text-dark-clr sm:w-5/6'>
 					Creating intuitive and engaging user experiences
 				</h2>
-				<h3 className='font-base text-base sm:text-lg text-dark-clr sm:w-5/6'>
-					I'm a software developer based in Gauteng - South Africa,
+				<h3 className='font-base text-base sm:text-lg text-light-clr sm:w-5/6'>
+					I’m a software developer based in Gauteng, South Africa,
 					dedicated to creating digital solutions that inspire,
-					delight, and solve real-world problems. I focus on building
-					impactful, user-centered experiences that make a difference.
+					delight, and address real-world problems. My focus is on
+					building impactful, user-centered experiences that truly
+					make a difference.
 				</h3>
 				<div className='flex'>
 					<Button
-						label='Talk to me'
+						label='My projects'
 						styles='bg-dark-clr text-white'
+						onClick={() => scrollTo('projects')}
 					/>
 				</div>
-				<div className='grid grid-cols-1 gap-10 md:grid-cols-4 pt-5'>
+				<div className='grid grid-cols-1 gap-10 md:grid-cols-4 pt-8'>
 					{data.skills.map((skill, index) => {
 						let icon;
 						const size = 42;
@@ -54,12 +85,17 @@ function Home() {
 						} else if (skill.name === 'Web and Mobile App') {
 							icon = <CiMobile1 size={size} color={color} />;
 						} else if (skill.name === 'Development') {
-							icon = <CiDesktop size={size} color={color} />;
-						} else if (skill.name === 'Soft Skills') {
 							icon = <CiTrophy size={size} color={color} />;
+						} else if (skill.name === 'Soft Skills') {
+							icon = (
+								<CiDeliveryTruck size={size} color={color} />
+							);
 						}
 						return (
-							<div className='flex flex-col gap-2'>
+							<div
+								className='flex flex-col gap-3'
+								key={index + '_'}
+							>
 								{icon}
 								<h4 className='font-semibold text-lg hover:cursor-pointer'>
 									{skill.name}
@@ -81,10 +117,16 @@ function Home() {
 					<span className='text-light-clr'>next project</span>
 				</h2>
 				<div className='flex pt-10 gap-5'>
-					<Button label='WhatsApp' styles='bg-dark-clr text-white' />
 					<Button
-						label='Email me'
+						label='WhatsApp'
+						styles='bg-dark-clr text-white'
+						to='https://wa.me/27680682916?text=Hi'
+						newTab
+					/>
+					<Button
+						label='My projects'
 						styles='border-2 border-border-clr '
+						onClick={() => scrollTo('projects')}
 					/>
 				</div>
 			</section>
