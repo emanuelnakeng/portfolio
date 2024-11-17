@@ -13,7 +13,7 @@ function ProjectDetails() {
 				<h3 className='text-xl font-semibold text-dark-clr'>
 					{project.projectName}
 				</h3>
-				<h2 className='font-bold text-4xl sm:text-6xl text-dark-clr'>
+				<h2 className='font-bold text-3xl sm:text-6xl text-dark-clr'>
 					{project.shortDescription}
 				</h2>
 			</section>

@@ -11,7 +11,7 @@ function ScreenWrap({ children }) {
 			<header className='bg-white'>
 				<div className='container mx-auto w-full py-10 flex justify-between items-center px-5'>
 					<Link
-						className='font-bold text-xl sm:text-2xl text-dark-clr'
+						className='font-bold text-2xl md:text-3xl text-dark-clr'
 						to='/'
 					>
 						Emanuel<span className='text-light-clr'>N.</span>

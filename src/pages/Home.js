@@ -19,7 +19,7 @@ function Home() {
 				<h3 className='text-xl font-semibold text-dark-clr'>
 					Hello! I'm a Software Developer.
 				</h3>
-				<h1 className='font-bold text-6xl sm:text-8xl text-dark-clr lg:w-11/12'>
+				<h1 className='font-bold text-5xl sm:text-8xl text-dark-clr lg:w-11/12'>
 					Building efficient solutions with quality code and{' '}
 					<span className='text-light-clr'>creative solutions</span>
 				</h1>
@@ -41,7 +41,7 @@ function Home() {
 				className='container mx-auto px-5 flex flex-col gap-5 pt-16 pb-10'
 				id='projects'
 			>
-				<h2 className='font-bold text-4xl sm:text-6xl text-dark-clr'>
+				<h2 className='font-bold text-3xl sm:text-6xl text-dark-clr'>
 					Discover my popular work
 				</h2>
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-16 pt-8'>
@@ -54,7 +54,7 @@ function Home() {
 				className='container mx-auto px-5 flex flex-col gap-8 py-16'
 				id='about'
 			>
-				<h2 className='font-bold text-4xl sm:text-6xl text-dark-clr sm:w-5/6'>
+				<h2 className='font-bold text-3xl sm:text-6xl text-dark-clr sm:w-5/6'>
 					Creating intuitive and engaging user experiences
 				</h2>
 				<h3 className='font-normal text-base sm:text-lg text-light-clr sm:w-5/6'>
