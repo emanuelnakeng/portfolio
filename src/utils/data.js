@@ -4,13 +4,13 @@ const data = {
 			name: 'LinkedIn',
 			link: 'https://www.linkedin.com/in/emanuel-nakeng',
 		},
+		{ name: 'X', link: 'https://x.com/emanuel_nakeng' },
 		{ name: 'Github', link: 'https://github.com/emanuelnakeng/' },
-		{ name: 'Figma', link: 'https://www.figma.com/@emanuelnakeng' },
 	],
 	navigation: [
-		{ name: 'Home', link: '/' },
-		{ name: 'About', link: 'http://localhost:3000/#about' },
-		{ name: 'Projects', link: '#projects' },
+		{ name: 'Home', link: '/', internal: true },
+		{ name: 'About', link: 'about', internal: true },
+		{ name: 'Projects', link: 'projects', internal: true },
 	],
 	projects: [
 		{

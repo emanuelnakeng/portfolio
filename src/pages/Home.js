@@ -2,6 +2,7 @@ import Button from '../components/common/Button';
 import ScreenWrap from '../components/common/ScreenWrap';
 import SingleProject from '../components/common/SingleProject';
 import data from '../utils/data';
+import { scrollTo, getRandomArrayItems } from '../utils/helpers';
 import {
 	CiPalette,
 	CiMobile1,
@@ -10,27 +11,15 @@ import {
 } from 'react-icons/ci';
 
 function Home() {
-	const scrollTo = id => {
-		const element = document.getElementById(id);
-		element?.scrollIntoView({
-			behavior: 'smooth',
-		});
-	};
-
-	const getRandomArrayItems = (arr, items) => {
-		const shuffled = arr.sort(() => 0.5 - Math.random());
-		return shuffled.slice(0, items);
-	};
-
 	const randomProjects = getRandomArrayItems(data.projects, 4);
 
 	return (
-		<ScreenWrap scrollTo={scrollTo}>
+		<ScreenWrap>
 			<section className='container mx-auto px-5 flex flex-col gap-8 py-16'>
 				<h3 className='text-xl font-semibold text-dark-clr'>
-					Hello! I'm Emanuel.
+					Hello! I'm a Software Developer.
 				</h3>
-				<h1 className='font-bold text-6xl sm:text-8xl text-dark-clr sm:w-11/12'>
+				<h1 className='font-bold text-6xl sm:text-8xl text-dark-clr lg:w-11/12'>
 					Building efficient solutions with quality code and{' '}
 					<span className='text-light-clr'>creative solutions</span>
 				</h1>
@@ -55,7 +44,7 @@ function Home() {
 				<h2 className='font-bold text-4xl sm:text-6xl text-dark-clr'>
 					Discover my popular work
 				</h2>
-				<div className='grid grid-cols-1 sm:grid-cols-2 gap-16 pt-8'>
+				<div className='grid grid-cols-1 md:grid-cols-2 gap-16 pt-8'>
 					{randomProjects.map(project => (
 						<SingleProject props={project} key={project.id} />
 					))}

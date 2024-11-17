@@ -1,6 +1,7 @@
 import Button from './Button';
-import MenuLinks from './MenuLinks';
 import data from '../../utils/data';
+import SocialLinks from './SocialLinks';
+import { Link } from 'react-router-dom';
 
 function ScreenWrap({ children }) {
 	const currentYear = new Date().getFullYear();
@@ -8,8 +9,13 @@ function ScreenWrap({ children }) {
 	return (
 		<>
 			<header className='bg-white'>
-				<div className='container mx-auto w-full py-16 flex justify-between items-center px-5'>
-					<MenuLinks color='text-dark-clr' links={data.navigation} />
+				<div className='container mx-auto w-full py-10 flex justify-between items-center px-5'>
+					<Link
+						className='font-bold text-xl sm:text-2xl text-dark-clr'
+						to='/'
+					>
+						Emanuel<span className='text-light-clr'>N.</span>
+					</Link>
 					<div>
 						<Button
 							styles='bg-dark-clr text-white'
@@ -25,7 +31,11 @@ function ScreenWrap({ children }) {
 				<h4 className='font-normal text-dark-clr text-sm sm:text-base'>
 					&copy; {currentYear} All rights reserved
 				</h4>
-				<MenuLinks color='text-dark-clr' links={data.socials} newTab />
+				<SocialLinks
+					color='text-dark-clr'
+					links={data.socials}
+					newTab
+				/>
 			</footer>
 		</>
 	);

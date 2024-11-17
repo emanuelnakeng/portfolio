@@ -7,6 +7,7 @@ function SingleProject({ props }) {
 			<Link
 				className='h-auto hover:opacity-100 opacity-90 transition duration-200 ease-in-out '
 				to={`/project/${props.id}`}
+				onClick={() => window.scrollTo(0, 0)}
 			>
 				<img
 					src={props.featuredImage}

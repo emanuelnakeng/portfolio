@@ -9,7 +9,7 @@ function ProjectDetails() {
 
 	return (
 		<ScreenWrap>
-			<section className='container md:max-w-5xl  mx-auto px-5 lg:px-0 flex flex-col gap-5 py-8'>
+			<section className='container lg:max-w-5xl  mx-auto px-5 lg:px-0 flex flex-col gap-5 py-8'>
 				<h3 className='text-xl font-semibold text-dark-clr'>
 					{project.projectName}
 				</h3>
@@ -17,14 +17,14 @@ function ProjectDetails() {
 					{project.shortDescription}
 				</h2>
 			</section>
-			<section className='container md:max-w-5xl mx-auto px-5 lg:px-0 py-8 '>
+			<section className='container lg:max-w-5xl mx-auto px-5 lg:px-0 py-8 '>
 				<img
 					src={project.featuredImage}
 					alt={project.projectName}
 					className='object-cover rounded-2xl hover:cursor-pointer w-full h-[55vh] overflow-clip'
 				/>
 			</section>
-			<section className='container md:max-w-5xl  mx-auto px-5 lg:px-0 flex flex-col md:flex-row gap-16 pt-8 pb-16 '>
+			<section className='container lg:max-w-5xl  mx-auto px-5 lg:px-0 flex flex-col md:flex-row gap-16 pt-8 pb-16 '>
 				<div className='w-full md:w-3/12 flex flex-col gap-5'>
 					<div>
 						<h3 className='text-xl font-semibold text-dark-clr'>

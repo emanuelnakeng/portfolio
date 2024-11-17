@@ -8,6 +8,7 @@ function Button({ to, label, styles, newTab, onClick }) {
 			onClick={onClick}
 			target={newTab ? '_blank' : ''}
 			className={`rounded-full  ${styles} transition ease-in-out delay-200 flex px-5 py-4 justify-between items-center`}
+			preventScrollReset={true}
 		>
 			<p className='font-medium text-base hover:underline underline-offset-2 pr-1'>
 				{label}
