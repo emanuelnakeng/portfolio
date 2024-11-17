@@ -19,7 +19,7 @@ function Home() {
 				<h3 className='text-xl font-semibold text-dark-clr'>
 					Hello! I'm a Software Developer.
 				</h3>
-				<h1 className='font-bold text-5xl sm:text-8xl text-dark-clr lg:w-11/12'>
+				<h1 className='font-bold text-6xl sm:text-8xl text-dark-clr lg:w-11/12'>
 					Building efficient solutions with quality code and{' '}
 					<span className='text-light-clr'>creative solutions</span>
 				</h1>
