@@ -14,7 +14,7 @@ function ScreenWrap({ children }) {
 						className='font-bold text-2xl md:text-3xl text-dark-clr'
 						to='/'
 					>
-						Emanuel<span className='text-light-clr'>N.</span>
+						E<span className='text-light-clr'>N.</span>
 					</Link>
 					<div>
 						<Button
