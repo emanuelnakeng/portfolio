@@ -17,7 +17,7 @@ function Home() {
 		<ScreenWrap>
 			<section className='container mx-auto px-5 flex flex-col gap-8 py-16'>
 				<h3 className='text-xl font-semibold text-dark-clr'>
-					Hello! I'm a Software Developer.
+					Hello! I'm Emanuel.
 				</h3>
 				<h1 className='font-bold text-6xl sm:text-8xl text-dark-clr lg:w-11/12'>
 					Building efficient solutions with quality code and{' '}
